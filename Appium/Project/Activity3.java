@@ -60,7 +60,6 @@ public class Activity3 {
         String uiSelector = "new UiSelector().textContains(\"Afternoon\")";
         String scrollTo = "new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView(" + uiSelector + ")";
         driver.findElement(AppiumBy.androidUIAutomator(scrollTo)).click();
-        //driver.findElement(AppiumBy.xpath("//android.widget.TextView[@text='Afternoon']")).click();
         wait.until(ExpectedConditions.visibilityOfElementLocated(AppiumBy.id("com.google.android.keep:id/save")));
         driver.findElement(AppiumBy.id("com.google.android.keep:id/save")).click();
         wait.until(ExpectedConditions.visibilityOfElementLocated(AppiumBy.accessibilityId("Navigate up")));
